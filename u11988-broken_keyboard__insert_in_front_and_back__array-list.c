@@ -1,3 +1,7 @@
+// 2018-06-14
+// uva 11988, ACCEPTED
+// Keywords: linked list using array implementation
+
 #include <stdio.h>
 #include <string.h>
 #define MAX_LINE 100000
@@ -23,15 +27,15 @@ main()
 				case ']':
 					cur = tail;
 					break;
-				default:
+				default:	// insert the node i from cur position
 					next[i] = next[cur];
 					next[cur] = i;
-					if (cur == tail) tail = i;
-					cur = i;
+					if (cur == tail) tail = i; // update tail if tail changes
+					cur = i; // update cur
 			}
 		}
 
-		for (i = head; i != tail; i = pos) {
+		for (i = head; i != tail; i = pos) { // visit the linked list from head to tail
 			pos = next[i];
 			printf("%c", input[pos]);	
 		}
