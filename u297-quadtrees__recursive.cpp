@@ -1,3 +1,8 @@
+// Copyright @ 2018, ch4n7
+// uva 297 quadtrees
+// keywoard: the recursive way to traversal of quadtrees
+// ACCEPTED on 20180627
+
 #include <iostream>
 #include <string>
 
